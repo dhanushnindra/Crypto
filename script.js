@@ -11,4 +11,5 @@ fetch(url,{mode:'no-cors'})
       console.log(name + " : " + price);
     }
     
-  });
+  })
+.catch((err) => console.log(err));
