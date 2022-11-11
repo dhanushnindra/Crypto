@@ -8,7 +8,7 @@ const url = "https://pro-api.coinmarketcap.com/v1/cryptocurrency/listings/latest
 // })
 //   .then(response => response.json())
 //   .then(data => {console.log(data)});
-fetch(url,{mode:'no-cors',
+fetch(url,{mode:'cors',
           Origin: 'https://dhanushnindra.github.io/Crypto'})
   .then(res => {
           console.log(res);
