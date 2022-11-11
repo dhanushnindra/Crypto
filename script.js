@@ -10,8 +10,8 @@ const url = "https://pro-api.coinmarketcap.com/v1/cryptocurrency/listings/latest
 //   .then(data => {console.log(data)});
 fetch(url,{mode:'no-cors',
           Origin: 'https://dhanushnindra.github.io/Crypto'})
-  .then((res) => res.json())
-  .then((obj) => {
+  .then(res => res.json())
+  .then(obj => {
     for (let coin of obj.data){
       
       //console.log(coin.name)
