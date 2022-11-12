@@ -15,6 +15,7 @@ fetch(url)
           res.json()
   })
   .then(obj => {
+    console.log(obj)
     for (let coin of obj.data){
       
       //console.log(coin.name)
