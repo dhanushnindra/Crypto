@@ -29,7 +29,7 @@ function addCoinCard(CoinName, CoinPrice){
   CoinCard.appendChild(price);
   
   
-  const box = document.getElementsByClassName("container");
+  const box = document.getElementById("myBox");
   box.appendChild(CoinCard);
 
 }
@@ -43,6 +43,7 @@ fetch(url)
     console.log(response)
     let box = document.createElement("div");
     box.className = "container";
+    box.setAttribute('id', 'myBox');
     box.className = "rounded bg-dark text-white";
 
     document.body.appendChild(box);
