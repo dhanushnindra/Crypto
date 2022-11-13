@@ -9,7 +9,10 @@ const url = "https://gentle-woodland-70534.herokuapp.com/";
 //           console.log(response);
 //           response.json()})
 //   .then(data => {console.log(data)});
-
+let box = document.createElement("div");
+    box.className = "container";
+    box.setAttribute('id', 'myBox');
+    box.className = "rounded bg-dark text-white";
 function addCoinCard(CoinName, CoinPrice){
 
   let CoinCard = document.createElement("div");
@@ -29,7 +32,7 @@ function addCoinCard(CoinName, CoinPrice){
   CoinCard.appendChild(price);
   
   
-  const box = document.getElementById("myBox");
+  //const box = document.getElementById("myBox");
   box.appendChild(CoinCard);
 
 }
@@ -41,12 +44,9 @@ fetch(url)
   .then(response => {
   
     console.log(response)
-    let box = document.createElement("div");
-    box.className = "container";
-    box.setAttribute('id', 'myBox');
-    box.className = "rounded bg-dark text-white";
+    
 
-    document.body.appendChild(box);
+    
     
     for (let coin of response.data){
       
@@ -58,6 +58,6 @@ fetch(url)
       
       console.log(name + " : " + price);
     }
-    
+    document.body.appendChild(box);
  })
 .catch((err) => console.log(err));
