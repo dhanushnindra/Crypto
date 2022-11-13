@@ -26,5 +26,5 @@ fetch(url)
 //       console.log(name + " : " + price);
 //     }
     
-  })
+//  })
 .catch((err) => console.log(err));
