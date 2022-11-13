@@ -10,7 +10,7 @@ const url = "https://gentle-woodland-70534.herokuapp.com/";
 //           response.json()})
 //   .then(data => {console.log(data)});
 fetch(url)
-  .then(response => res.json())
+  .then(response => response.json())
   .then(response => {
   
     console.log(response)
