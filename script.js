@@ -45,7 +45,7 @@ fetch(url)
     box.className = "container";
     box.className = "rounded bg-dark text-white";
 
-    body.appendChild(box);
+    element.body.appendChild(box);
     
     for (let coin of response.data){
       
