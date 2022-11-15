@@ -2,12 +2,12 @@ const url = "https://gentle-woodland-70534.herokuapp.com/";
 
 //CREATE MAIN CONTAINER
 let box = document.createElement("table");
-box.className = " overflow-x-auto relative w-full text-sm text-left text-gray-500";
+box.className = " w-full text-sm text-left text-gray-500";
 
 box.innerHTML = "<thead class='text-xs uppercase bg-gray-700 text-gray-400'> <tr> <th scope='col' class='py-3 px-6'>Coin</th> <th scope='col' class='py-3 px-6'>Price</th> </tr> </thead>";
 
 box.setAttribute('id', 'myBox');
-box.className = "table-fixed  border-2 border-gray-800 border-collapse drop-shadow-lg rounded-lg mx-4 my-4  px-4 py-4 bg-green-200 ";
+box.className = " rounded-lg mx-4 my-4  px-4 py-4 bg-green-200 ";
 
 let boxBody = document.createElement("tbody");
 boxBody.className = "bg-slate-600 border-gray-200 ";
