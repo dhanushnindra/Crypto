@@ -44,6 +44,7 @@ fetch(url)
         //console.log(coin.name)
         let name = coin.name;
         let price = coin.quote.USD.price;
+        price = Number((price).toFixed(2));
         
         addCoinCard(name, price);
         
