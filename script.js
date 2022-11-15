@@ -15,7 +15,7 @@ boxBody.className = "bg-slate-600 border-gray-200 ";
 function addCoinCard(CoinName, CoinPrice){
 
     let CoinCard = document.createElement("tr");
-    CoinCard.className = "bg-gray-800 border-gray-700 hover:shadow-xl"
+    CoinCard.className = "bg-gray-800 border-gray-700 text-gray-100 hover:shadow-xl"
 
     const name = document.createElement("td");
     name.innerHTML += CoinName;
