@@ -2,14 +2,7 @@ const url = "https://gentle-woodland-70534.herokuapp.com/";
 
 //CREATE MAIN CONTAINER
 let box = document.createElement("table");
-  box.innerHTML = "
-    <thead>
-        <tr>
-          <th>Coin</th>
-          <th>Price</th>
-          
-        </tr>
-    </thead>";
+  box.innerHTML = "<thead> <tr> <th>Coin</th> <th>Price</th> </tr> </thead>";
 
 box.setAttribute('id', 'myBox');
 box.className = "table-fixed drop-shadow-lg rounded-lg mx-4 my-4  px-4 py-4 bg-green-200 ";
