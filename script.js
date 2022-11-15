@@ -2,7 +2,9 @@ const url = "https://gentle-woodland-70534.herokuapp.com/";
 
 //CREATE MAIN CONTAINER
 let box = document.createElement("table");
-  box.innerHTML = "<thead> <tr> <th>Coin</th> <th>Price</th> </tr> </thead>";
+        document.body.appendChild(box);
+
+box.innerHTML = "<thead> <tr> <th>Coin</th> <th>Price</th> </tr> </thead>";
 
 box.setAttribute('id', 'myBox');
 box.className = "table-fixed drop-shadow-lg rounded-lg mx-4 my-4  px-4 py-4 bg-green-200 ";
@@ -15,14 +17,16 @@ function addCoinCard(CoinName, CoinPrice){
     CoinCard.className = "px-4 py-2 hover:shadow-xl"
 
     const name = document.createElement("td");
-    const namee = document.createTextNode(CoinName );  
+    name.innerHTML += CoinName;
+//     const namee = document.createTextNode(CoinName );  
 //     name.className = "col-sm";
-    name.appendChild(namee);
+//     name.appendChild(namee);
 
     const price = document.createElement("td");
-    const pricee = document.createTextNode(":   $ " + CoinPrice);  
+    price.innerHTML += CoinPrice
+//     const pricee = document.createTextNode(":   $ " + CoinPrice);  
 //     price.className = "col-sm";
-    price.appendChild(pricee);
+//     price.appendChild(pricee);
 
     CoinCard.appendChild(name);
     CoinCard.appendChild(price);
@@ -53,6 +57,5 @@ fetch(url)
         
         console.log(name + " : " + price);
         }
-        document.body.appendChild(box);
     })
     .catch((err) => console.log(err));
