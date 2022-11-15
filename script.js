@@ -20,13 +20,13 @@ function addCoinCard(CoinName, CoinPrice){
     const name = document.createElement("td");
     name.innerHTML += CoinName;
 //     const namee = document.createTextNode(CoinName );  
-//     name.className = "col-sm";
+    name.className = "py-4 px-6";
 //     name.appendChild(namee);
 
     const price = document.createElement("td");
     price.innerHTML += CoinPrice
 //     const pricee = document.createTextNode(":   $ " + CoinPrice);  
-//     price.className = "col-sm";
+price.className = "py-4 px-6";
 //     price.appendChild(pricee);
 
     CoinCard.appendChild(name);
