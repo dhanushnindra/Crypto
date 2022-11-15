@@ -60,6 +60,8 @@ fetch(url)
                 
         }
         box.appendChild(boxBody);
-        document.body.appendChild(box);
+       
+        let myDiv = getElementById("Divv");
+        myDiv.appendChild(box);
     })
     .catch((err) => console.log(err));
