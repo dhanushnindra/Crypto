@@ -4,7 +4,7 @@ const url = "https://gentle-woodland-70534.herokuapp.com/";
 let box = document.createElement("div");
 
 box.setAttribute('id', 'myBox');
-box.className = "container drop-shadow-lg rounded-lg mx-4 my-6  px-5 py-5 bg-green-200 space-y-6";
+box.className = " drop-shadow-lg rounded-lg mx-4 my-4  px-4 py-4 bg-green-200 space-y-6";
 
 function addCoinCard(CoinName, CoinPrice){
 
