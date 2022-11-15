@@ -2,7 +2,7 @@ const url = "https://gentle-woodland-70534.herokuapp.com/";
 
 //CREATE MAIN CONTAINER
 let box = document.createElement("table");
-box.className = "text-slate-300";
+box.className = "text-slate-200";
 
 box.innerHTML = "<thead class='bg-slate-800'> <tr> <th>Coin</th> <th>Price</th> </tr> </thead>";
 
@@ -10,7 +10,7 @@ box.setAttribute('id', 'myBox');
 box.className = "table-fixed  border-2 border-gray-800 border-collapse drop-shadow-lg rounded-lg mx-4 my-4  px-4 py-4 bg-green-200 ";
 
 let boxBody = document.createElement("tbody");
-boxBody.className = "bg-slate-800 border-gray-800 ";
+boxBody.className = "bg-slate-600 border-gray-200 ";
 
 function addCoinCard(CoinName, CoinPrice){
 
