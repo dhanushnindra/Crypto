@@ -10,12 +10,12 @@ box.setAttribute('id', 'myBox');
 //box.className = " rounded-lg  px-4 py-4 bg-green-200 ";
 
 let boxBody = document.createElement("tbody");
-boxBody.className = "bg-slate-600 border-sky-700 ";
+boxBody.className = "bg-slate-600 border-sky-800 ";
 
 function addCoinCard(CoinName, CoinPrice){
 
     let CoinCard = document.createElement("tr");
-    CoinCard.className = "bg-sky-900 border-sky-700  border-b text-sky-100 hover:shadow-xl"
+    CoinCard.className = "bg-sky-900 border-sky-800  border-b text-sky-100 hover:shadow-xl"
 
     const name = document.createElement("td");
     name.innerHTML += CoinName;
