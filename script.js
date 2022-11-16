@@ -10,7 +10,7 @@ box.setAttribute('id', 'myBox');
 //box.className = " rounded-lg  px-4 py-4 bg-green-200 ";
 
 let boxBody = document.createElement("tbody");
-boxBody.className = "bg-slate-600 border-sky-200 ";
+boxBody.className = "bg-slate-600 border-sky-700 ";
 
 function addCoinCard(CoinName, CoinPrice){
 
