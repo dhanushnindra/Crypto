@@ -2,7 +2,7 @@ const url = "https://gentle-woodland-70534.herokuapp.com/";
 
 //CREATE MAIN CONTAINER
 let box = document.createElement("table");
-box.className = " w-full text-sm text-left text-gray-500 shadow-md rounded-md mx-auto";
+box.className = " w-full text-sm text-left text-gray-500 shadow-md rounded-md mx-5";
 
 box.innerHTML = "<thead class='text-xs uppercase bg-gray-700 text-gray-400'> <tr> <th scope='col' class='py-3 px-6'>Coin</th> <th scope='col' class='py-3 px-6'>Price</th> </tr> </thead>";
 
@@ -31,6 +31,7 @@ price.className = "py-4 px-6";
 
     CoinCard.appendChild(name);
     CoinCard.appendChild(price);
+
 
     console.log("DONE");
     
