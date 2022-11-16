@@ -4,7 +4,7 @@ const url = "https://gentle-woodland-70534.herokuapp.com/";
 let box = document.createElement("table");
 box.className = " w-full text-sm text-left text-sky-500 shadow-md rounded-md ";
 
-box.innerHTML = "<thead class='text-xs uppercase bg-sky-800 text-sky-400'> <tr> <th scope='col' class='py-5 px-6'>Coin</th> <th scope='col' class='py-5 px-6'>Price</th> </tr> </thead>";
+box.innerHTML = "<thead class='text-xs uppercase bg-sky-800 text-sky-300'> <tr> <th scope='col' class='py-5 px-6'>Coin</th> <th scope='col' class='py-5 px-6'>Price</th> </tr> </thead>";
 
 box.setAttribute('id', 'myBox');
 //box.className = " rounded-lg  px-4 py-4 bg-green-200 ";
