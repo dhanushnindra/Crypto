@@ -2,20 +2,20 @@ const url = "https://gentle-woodland-70534.herokuapp.com/";
 
 //CREATE MAIN CONTAINER
 let box = document.createElement("table");
-box.className = " w-full text-sm text-left text-emerald-500 shadow-md rounded-md ";
+box.className = " w-full text-sm text-left text-sky-500 shadow-md rounded-md ";
 
-box.innerHTML = "<thead class='text-xs uppercase bg-emerald-700 text-emerald-500'> <tr> <th scope='col' class='py-5 px-6'>Coin</th> <th scope='col' class='py-5 px-6'>Price</th> </tr> </thead>";
+box.innerHTML = "<thead class='text-xs uppercase bg-sky-700 text-sky-600'> <tr> <th scope='col' class='py-5 px-6'>Coin</th> <th scope='col' class='py-5 px-6'>Price</th> </tr> </thead>";
 
 box.setAttribute('id', 'myBox');
 //box.className = " rounded-lg  px-4 py-4 bg-green-200 ";
 
 let boxBody = document.createElement("tbody");
-boxBody.className = "bg-slate-600 border-emerald-200 ";
+boxBody.className = "bg-slate-600 border-sky-200 ";
 
 function addCoinCard(CoinName, CoinPrice){
 
     let CoinCard = document.createElement("tr");
-    CoinCard.className = "bg-emerald-600 border-emerald-700  border-b text-emerald-100 hover:shadow-xl"
+    CoinCard.className = "bg-sky-800 border-sky-700  border-b text-sky-100 hover:shadow-xl"
 
     const name = document.createElement("td");
     name.innerHTML += CoinName;
