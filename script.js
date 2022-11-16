@@ -24,7 +24,7 @@ function addCoinCard(CoinName, CoinPrice){
 //     name.appendChild(namee);
 
     const price = document.createElement("td");
-    price.innerHTML += CoinPrice
+    price.innerHTML += "$ " + CoinPrice;
 //     const pricee = document.createTextNode(":   $ " + CoinPrice);  
 price.className = "py-4 px-6";
 //     price.appendChild(pricee);
