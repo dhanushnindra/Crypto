@@ -1,4 +1,4 @@
-const url = "https://gentle-woodland-70534.herokuapp.com/";
+const url = "https://stanchei-render-server-api.onrender.com/";
 
 //CREATE MAIN CONTAINER
 let box = document.createElement("table");
