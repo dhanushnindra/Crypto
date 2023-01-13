@@ -38,7 +38,7 @@ function addCoinCard(Coin){
     CoinCard.appendChild(price);
     CoinCard.appendChild(rank);
 
-    console.log("DONE ADDING ", CoinName);
+    console.log("DONE ADDING ", Coin.name);
     
     //APPEND DATA CARD BOX TO THE CONTENT CONTAINER
     boxBody.appendChild(CoinCard);
