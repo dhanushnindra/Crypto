@@ -4,7 +4,7 @@ let box = document.createElement("table");
 
 box.className = " w-full text-sm text-left text-sky-500 shadow-md rounded-md ";
 
-box.innerHTML = "<thead class='text-xs uppercase bg-sky-800 text-sky-300'> <tr> <th scope='col' class='py-5 px-6'>Coin</th> <th scope='col' class='py-5 px-6'>Price</th> <th scope='col' class='py-5 px-6'>Rank</th> </tr> </thead>";
+box.innerHTML = "<thead class='text-xs uppercase bg-sky-800 text-sky-300'> <tr> <th scope='col' class='py-5 px-6'>Rank <button onClick=sortData >Sort</button>  </th> <th scope='col' class='py-5 px-6'>Coin</th> <th scope='col' class='py-5 px-6'>Price</th>  </tr> </thead>";
 
 box.setAttribute('id', 'myBox');
 
@@ -19,6 +19,10 @@ function addCoinCard(Coin){
     let CoinCard = document.createElement("tr");
     CoinCard.className = "bg-sky-900 border-sky-800  border-b text-sky-100 hover:shadow-xl"
     
+    const rank = document.createElement("td");
+    rank.innerHTML += Coin.rank;
+    rank.className = "py-4 px-6";
+    
     //CREATE FIRST ELEMENT COIN NAME
     const name = document.createElement("td");
     name.innerHTML += Coin.name;
@@ -29,9 +33,7 @@ function addCoinCard(Coin){
     price.innerHTML += "$ " + Coin.price;
     price.className = "py-4 px-6";
     
-    const rank = document.createElement("td");
-    rank.innerHTML += Coin.rank;
-    rank.className = "py-4 px-6";
+
     
     //APPEND ELEMENTS TO THE DATA ROW CARD BOX
     CoinCard.appendChild(name);
@@ -45,6 +47,22 @@ function addCoinCard(Coin){
 
 }
 
+let data = []
+let dataOrder = 1
+
+function sortData(){
+    if(dataOrder){
+        dataOrder = 0;
+        data.sort((c1, c2) => c1.rank - c2.rank);
+    }
+    
+    else{
+        dataOrder = 1;
+        data.sort((c1, c2) => c2.rank - c1.rank);
+    }
+        
+}
+
 //FETCH DATA FROM THIS URL
 const url = "https://stanchei-render-server-api.onrender.com/";
 
@@ -54,7 +72,7 @@ fetch(url)
         //JSON CONVERTED TO JS OBJECT
         console.log(response)
     
-        let data = []
+        
         
         for (let coin of response.data){
 
@@ -67,7 +85,6 @@ fetch(url)
             );
         }
           
-        data.sort((c1, c2) => c1.rank - c2.rank)
         
         for (let coin of data){
             addCoinCard(coin);
