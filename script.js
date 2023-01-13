@@ -13,7 +13,7 @@ boxBody.className = "bg-slate-600 border-sky-800 ";
 
 
 //ADD NEW COIN DATA ROW BY THIS FUNCTION
-function addCoinCard(CoinName, CoinPrice){
+function addCoinCard(Coin){
     
     //COIN DATA ROW CARD OR BOX WRAPPER
     let CoinCard = document.createElement("tr");
@@ -21,17 +21,22 @@ function addCoinCard(CoinName, CoinPrice){
     
     //CREATE FIRST ELEMENT COIN NAME
     const name = document.createElement("td");
-    name.innerHTML += CoinName;
+    name.innerHTML += Coin.name;
     name.className = "py-4 px-6";
     
     //CREATE SECOND ELEMENT COIN PRICE
     const price = document.createElement("td");
-    price.innerHTML += "$ " + CoinPrice;
+    price.innerHTML += "$ " + Coin.price;
     price.className = "py-4 px-6";
+    
+    const rank = document.createElement("td");
+    rank.innerHTML += Coin.rank;
+    rank.className = "py-4 px-6";
     
     //APPEND ELEMENTS TO THE DATA ROW CARD BOX
     CoinCard.appendChild(name);
     CoinCard.appendChild(price);
+    CoinCard.appendChild(rank);
 
     console.log("DONE ADDING ", CoinName);
     
@@ -59,12 +64,13 @@ fetch(url)
                     price : Number((coin.quote.USD.price).toFixed(2)),
                     rank : coin.cmc_rank
                 }
+            );
         }
           
         data.sort((c1, c2) => c1.rank - c2.rank)
         
         for (let coin of data){
-            addCoinCard(coin.name, coin.price);
+            addCoinCard(coin);
         }
     
         //APPEND CONTENT BOX TO MAIN BOX
