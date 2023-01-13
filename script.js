@@ -52,6 +52,7 @@ let data = []
 let dataOrder = 1
 
 function sortData(){
+    
     if(dataOrder){
         dataOrder = 0;
         data.sort((c1, c2) => c1.rank - c2.rank);
@@ -61,6 +62,7 @@ function sortData(){
         dataOrder = 1;
         data.sort((c1, c2) => c2.rank - c1.rank);
     }
+    console.log(data);
         
 }
 
