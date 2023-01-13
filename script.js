@@ -36,9 +36,10 @@ function addCoinCard(Coin){
 
     
     //APPEND ELEMENTS TO THE DATA ROW CARD BOX
+    CoinCard.appendChild(rank);
     CoinCard.appendChild(name);
     CoinCard.appendChild(price);
-    CoinCard.appendChild(rank);
+    
 
     console.log("DONE ADDING ", Coin.name);
     
