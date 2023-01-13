@@ -48,17 +48,23 @@ fetch(url)
     .then(response => {
         //JSON CONVERTED TO JS OBJECT
         console.log(response)
+    
+        let data = []
         
         for (let coin of response.data){
 
-            let name = coin.name;
-            let price = coin.quote.USD.price;
-            price = Number((price).toFixed(2));
-
-            addCoinCard(name, price);
-
-            console.log(name + " : " + price);
-                
+            data.push(
+                {
+                    name : coin.name,
+                    price : Number((coin.quote.USD.price).toFixed(2)),
+                    rank : coin.cmc_rank
+                }
+        }
+          
+        data.sort((c1, c2) => c1.rank - c2.rank)
+        
+        for (let coin of data){
+            addCoinCard(coin.name, coin.price);
         }
     
         //APPEND CONTENT BOX TO MAIN BOX
